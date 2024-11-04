@@ -10,11 +10,22 @@ const { title } = Astro.props
 <html lang="en" class="bg-sky-950 text-amber-50">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <title>{title}</title>
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <meta
+      name="description"
+      content="Full stack developer based in Barcelona"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/edyespinal.png" />
+    <meta property="og:title" content="Edy Espinal" />
+    <meta
+      property="og:description"
+      content="Full stack developer based in Barcelona"
+    />
+    <meta property="og:image" content="https://github.com/edyespinal.png" />
   </head>
   <body>
     <slot />
