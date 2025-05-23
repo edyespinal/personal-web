@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Metropolis";
+    src: url("./fonts/Metropolis-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Metropolis";
+    src: url("./fonts/Metropolis-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+  } 
+
+  html,body {
+    @apply bg-cyan-950 text-cyan-50;
+  }
+
+  a {
+    @apply hover:font-bold transition-all duration-75;
+  }
+}

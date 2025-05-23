@@ -1,13 +1,15 @@
 ---
 type Props = {
-  title: string
-}
+  title: string;
+};
 
-const { title } = Astro.props
+const { title } = Astro.props;
+
+import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en" class="bg-sky-950 text-amber-50">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
@@ -27,7 +29,7 @@ const { title } = Astro.props
     />
     <meta property="og:image" content="https://github.com/edyespinal.png" />
   </head>
-  <body>
+  <body class="relative h-screen">
     <slot />
   </body>
 </html>
