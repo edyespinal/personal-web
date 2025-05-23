@@ -1,68 +1,209 @@
 ---
 import { Image } from "astro:assets";
+import { ArrowUpRight, Mouse } from "lucide-astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Edy Espinal">
-  <main
-    class="absolute bottom-16 w-full flex flex-col gap-y-16 px-8 lg:items-end lg:flex-row lg:px-20 lg:gap-x-8 lg:gap-y-0"
+  <header
+    class="px-4 pt-8 z-10 lg:fixed lg:bottom-0 lg:left-0 lg:right-0 lg:bg-cyan-950 lg:px-16 lg:pb-24 lg:h-[20rem]"
   >
-    <section class="flex flex-col gap-y-8 flex-1">
-      <div
-        class="flex flex-col gap-x-8 gap-y-4 lg:items-end lg:flex-row lg:gap-y-0"
-      >
-        <Image
-          src="https://github.com/edyespinal.png"
-          alt="Edy Espinal"
-          class="rounded-full"
-          height={128}
-          width={128}
-          inferSize
-        />
+    <div class="flex gap-x-4 lg:mb-8">
+      <Image
+        src="https://github.com/edyespinal.png"
+        alt="Edy Espinal"
+        class="rounded-full size-20 lg:size-32"
+        height={128}
+        width={128}
+        inferSize
+      />
+      <div class="lg:self-end">
         <h1
-          class="font-primary font-bold tracking-tighter text-5xl md:text-7xl"
+          class="flex gap-x-1 font-bold tracking-tighter text-2xl lg:flex-col lg:gap-x-0 lg:text-7xl"
         >
-          <p class="leading-[0.65]">Edy</p>
+          <p class="lg:leading-[0.65]">Edy</p>
           <p>Espinal</p>
         </h1>
-      </div>
-
-      <div
-        class="flex flex-col gap-x-16 gap-y-4 md:flex-row md:gap-y-0 md:gap-x-24"
-      >
-        <div>
+        <div class="lg:hidden">
           <h2>full stack developer</h2>
-          <p class="opacity-50">based in Barcelona</p>
-        </div>
-        <div>
-          <p class="opacity-50">get in touch</p>
-          <a href="mailto:contacto@edyespinal.com">contacto@edyespinal.com</a>
+          <p class="opacity-50">Barcelona, Spain</p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="flex gap-x-4 lg:flex-col lg:gap-x-0 lg:text-right">
-      <a
-        href="https://instagram.com/edy.espinal"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="font-mono text-[0.65rem] opacity-50">01</span> instagram
-      </a>
-      <a
-        href="https://github.com/edyespinal"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="font-mono text-[0.65rem] opacity-50">02</span> github
-      </a>
-      <a
-        href="https://linkedin.com/in/edyespinal"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="font-mono text-[0.65rem] opacity-50">03</span> linkedin
-      </a>
-    </section>
+    <div class="hidden lg:flex lg:gap-x-16">
+      <div>
+        <h2>full stack developer</h2>
+        <p class="opacity-50">Barcelona, Spain</p>
+      </div>
+      <div>
+        <p class="opacity-50">get in touch</p>
+        <a href="mailto:contacto@edyespinal.com">contacto@edyespinal.com</a>
+      </div>
+    </div>
+  </header>
+
+  <main
+    class="flex flex-col gap-y-8 px-4 py-16 max-w-xl lg:ml-auto lg:pr-16 lg:text-right lg:mt-[calc(100vh-32rem)]"
+  >
+    <Mouse
+      class="hidden size-8 ml-auto mb-24 opacity-50 lg:block animate-ping repeat-1"
+    />
+    <div class="">
+      <h2 class="text-lg lg:text-4xl my-12">about</h2>
+      <p class="opacity-50">
+        I'm Edy, a full stack developer passionate about growing and improving
+        my skills constantly and building things that can be useful and helpful
+        for others... and sometimes just for fun.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="text-lg lg:text-4xl my-12">work experience</h2>
+      <ul class="flex flex-col gap-y-8">
+        <li>
+          <p class="text-sm opacity-50">2023 - 2025</p>
+          <a
+            href="https://www.experimentality.co"
+            class="flex gap-x-1 items-center lg:justify-end"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Senior Full Stack Engineer - Experimentality
+            <ArrowUpRight class="size-3" />
+          </a>
+          <p class="opacity-50">
+            Architecture design and development of apps and integrations mainly
+            focused on payment providers and e-commerce.
+          </p>
+          <p class="opacity-35 text-sm">
+            TypeScript · Node.js · React · Next.js · GraphQL · PostgreSQL
+          </p>
+        </li>
+        <li>
+          <p class="text-sm opacity-50">2021 - 2023</p>
+          <a
+            href="https://vtex.com"
+            class="flex gap-x-1 items-center lg:justify-end"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Senior Full Stack Engineer - VTEX
+            <ArrowUpRight class="size-3" />
+          </a>
+          <p class="opacity-50">
+            Enablement of VTEX partners by supporting them with architecture
+            design and development of apps and integrations for the VTEX
+            E-commerce platform and ensuring that best practices and guidelines
+            are met.
+          </p>
+          <p class="opacity-35 text-sm">
+            TypeScript · Node.js · React · Next.js · GraphQL · PostgreSQL
+          </p>
+        </li>
+        <li>
+          <p class="text-sm opacity-50">2019 - 2021</p>
+          <a
+            href="https://kubbs.es"
+            class="flex gap-x-1 items-center lg:justify-end"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Full Stack Engineer - Kubbs
+            <ArrowUpRight class="size-3" />
+          </a>
+          <p class="opacity-50">
+            Lead architect and developer for DBuild, a platform for
+            architectural studios to visualise the 3D models and manage and
+            share the data for their projects.
+          </p>
+          <p class="opacity-35 text-sm">TypeScript · Node.js · React · NoSQL</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lg:mb-96">
+      <h2 class="text-lg lg:text-4xl my-12">personal projects</h2>
+      <ul class="flex flex-col gap-y-8">
+        <li>
+          <p class="text-sm opacity-50">in development</p>
+          <p class="flex gap-x-1 items-center lg:justify-end">BukiHub</p>
+          <p class="opacity-50">
+            BukiHub is a reservations platform focused on helping hospitality
+            businesses in Latin America manage their reservations more
+            efficiently.
+          </p>
+          <p class="opacity-35 text-sm">
+            TypeScript · Next.js · PostgreSQL . Drizzle ORM
+          </p>
+        </li>
+        <li>
+          <p class="text-sm opacity-50">ongoing</p>
+          <a
+            href="https://rolamusic.app"
+            class="flex gap-x-1 items-center lg:justify-end"
+            target="_blank"
+            rel="noopener noreferrer"
+            >ROLA
+            <ArrowUpRight class="size-3" />
+          </a>
+          <p class="opacity-50">
+            ROLA Music is a platform for musicians to create and connect with
+            their fans in an exclusive community helping them monetise their
+            support.
+          </p>
+          <p class="opacity-35 text-sm">
+            TypeScript · Next.js · PostgreSQL · NoSQL · Drizzle ORM
+          </p>
+        </li>
+      </ul>
+    </div>
   </main>
+
+  <footer
+    class="flex flex-col gap-y-8 px-4 py-16 z-20 lg:fixed lg:bottom-0 lg:right-0 lg:bg-cyan-950 lg:px-16 lg:py-24 lg:h-[20rem]"
+  >
+    <div class="lg:hidden">
+      <p class="opacity-50">get in touch</p>
+      <a href="mailto:contacto@edyespinal.com">contacto@edyespinal.com</a>
+    </div>
+    <div class="lg:text-right">
+      <h3>links</h3>
+      <div>
+        <a
+          href="https://instagram.com/edy.espinal"
+          target="_blank"
+          class="flex gap-x-1 items-baseline lg:justify-end"
+          rel="noopener noreferrer"
+        >
+          <span class="font-mono text-[0.65rem] opacity-50">01</span>
+          <span class="flex gap-x-1 items-center">
+            instagram
+            <ArrowUpRight class="size-3" />
+          </span>
+        </a>
+        <a
+          href="https://github.com/edyespinal"
+          target="_blank"
+          class="flex gap-x-1 items-baseline lg:justify-end"
+          rel="noopener noreferrer"
+        >
+          <span class="font-mono text-[0.65rem] opacity-50">02</span>
+          <span class="flex gap-x-1 items-center">
+            github
+            <ArrowUpRight class="size-3" />
+          </span>
+        </a>
+        <a
+          href="https://linkedin.com/in/edyespinal"
+          target="_blank"
+          class="flex gap-x-1 items-baseline lg:justify-end"
+          rel="noopener noreferrer"
+        >
+          <span class="font-mono text-[0.65rem] opacity-50">03</span>
+          <span class="flex gap-x-1 items-center">
+            linkedin
+            <ArrowUpRight class="size-3" />
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
 </Layout>

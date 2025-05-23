@@ -18,10 +18,16 @@
   } 
 
   html,body {
-    @apply bg-cyan-950 text-cyan-50;
+    @apply bg-cyan-950 text-cyan-50 font-primary;
   }
 
   a {
     @apply hover:font-bold transition-all duration-75;
+  }
+}
+
+@layer utilities {
+  .repeat-1 {
+    animation-iteration-count: 1;
   }
 }
