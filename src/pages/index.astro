@@ -2,6 +2,41 @@
 import { Image } from "astro:assets";
 import { ArrowUpRight, Mouse } from "lucide-astro";
 import Layout from "../layouts/Layout.astro";
+
+const workItems = [
+  { 
+    year: "2025 - currently",
+    title: "Senior Full Stack Engineer",
+    company: "Wizeline",
+    website: "https://www.wizeline.ai/",
+    desc: "Development of softaware solutions for Wizeline's clients focused on financial and energy markets",
+    stack: "TypeScript · Node.js · React · Next.js"
+  },
+  {
+    year: "2023 - 2025",
+    title: "Senior Full Stack Engineer",
+    company: "Experimentality",
+    website: "https://www.experimentality.co",
+    desc: "Architecture design and development of apps and integrations mainly focused on payment providers and e-commerce.",
+    stack: "TypeScript · Node.js · React · Next.js · GraphQL · PostgreSQL",
+  },
+  {
+    year: "2021 - 2023",
+    title: "Senior Full Stack Engineer",
+    company: "VTEX",
+    webite: "https://vtex.com/",
+    desc: "Enablement of VTEX partners by supporting them with architecture design and development of apps and integrations for the VTEX E-commerce platform and ensuring that best practices and guidelines are met.",
+    stack: "TypeScript · Node.js · React · Next.js · GraphQL · PostgreSQL",
+  },
+  {
+    year: "2019 - 2021",
+    title: "Full Stack Engineer",
+    company: "Kubbs",
+    website: "https://kubbs.es",
+    desc: "Lead architect and developer for DBuild, a platform for architectural studios to visualise the 3D models and manage and share the data for their projects.",
+    stack: "TypeScript · Node.js · React · NoSQL",
+  }
+]
 ---
 
 <Layout title="Edy Espinal">
@@ -59,79 +94,27 @@ import Layout from "../layouts/Layout.astro";
     <div>
       <h2 class="text-lg lg:text-4xl my-12">work experience</h2>
       <ul class="flex flex-col gap-y-8">
-        <li>
-          <p class="text-sm opacity-50">2023 - 2025</p>
-          <a
-            href="https://www.experimentality.co"
-            class="flex gap-x-1 items-center lg:justify-end"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Senior Full Stack Engineer - Experimentality
-            <ArrowUpRight class="size-3" />
-          </a>
-          <p class="opacity-50">
-            Architecture design and development of apps and integrations mainly
-            focused on payment providers and e-commerce.
-          </p>
-          <p class="opacity-35 text-sm">
-            TypeScript · Node.js · React · Next.js · GraphQL · PostgreSQL
-          </p>
-        </li>
-        <li>
-          <p class="text-sm opacity-50">2021 - 2023</p>
-          <a
-            href="https://vtex.com"
-            class="flex gap-x-1 items-center lg:justify-end"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Senior Full Stack Engineer - VTEX
-            <ArrowUpRight class="size-3" />
-          </a>
-          <p class="opacity-50">
-            Enablement of VTEX partners by supporting them with architecture
-            design and development of apps and integrations for the VTEX
-            E-commerce platform and ensuring that best practices and guidelines
-            are met.
-          </p>
-          <p class="opacity-35 text-sm">
-            TypeScript · Node.js · React · Next.js · GraphQL · PostgreSQL
-          </p>
-        </li>
-        <li>
-          <p class="text-sm opacity-50">2019 - 2021</p>
-          <a
-            href="https://kubbs.es"
-            class="flex gap-x-1 items-center lg:justify-end"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Full Stack Engineer - Kubbs
-            <ArrowUpRight class="size-3" />
-          </a>
-          <p class="opacity-50">
-            Lead architect and developer for DBuild, a platform for
-            architectural studios to visualise the 3D models and manage and
-            share the data for their projects.
-          </p>
-          <p class="opacity-35 text-sm">TypeScript · Node.js · React · NoSQL</p>
-        </li>
+        {workItems.map((item) => (
+          <li>
+            <p class="text-sm opacity-50">{item.year}</p>
+            <a
+              href={item.website}
+              class="flex gap-x-1 items-center lg:justify-end"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{item.title} - {item.company}
+              <ArrowUpRight class="size-3" />
+            </a>
+            <p class="opacity-50">{item.desc}</p>
+            <p class="opacity-35 text-sm">{item.stack}</p>
+          </li>
+        ))}
       </ul>
     </div>
 
     <div class="lg:mb-96">
       <h2 class="text-lg lg:text-4xl my-12">personal projects</h2>
       <ul class="flex flex-col gap-y-8">
-        <li>
-          <p class="text-sm opacity-50">in development</p>
-          <p class="flex gap-x-1 items-center lg:justify-end">BukiHub</p>
-          <p class="opacity-50">
-            BukiHub is a reservations platform focused on helping hospitality
-            businesses in Latin America manage their reservations more
-            efficiently.
-          </p>
-          <p class="opacity-35 text-sm">
-            TypeScript · Next.js · PostgreSQL . Drizzle ORM
-          </p>
-        </li>
         <li>
           <p class="text-sm opacity-50">ongoing</p>
           <a
